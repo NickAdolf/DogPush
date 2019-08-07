@@ -73,10 +73,12 @@ IGNORE_OPTIONS = ['silenced']
 # There are two type of defaults: defaults coming from TrueAccord (all
 # our rules get these values by default) and defaults coming from DataDog.
 LOCAL_DEFAULT_RULE_OPTIONS = {
+  'notify_no_data': True,
   'renotify_interval': 15,
 }
 
 DATADOG_DEFAULT_OPTIONS = {
+  'notify_audit': False,
   'locked': False,
   'silenced': {}
 }
