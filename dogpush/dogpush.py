@@ -75,7 +75,6 @@ IGNORE_OPTIONS = ['silenced']
 LOCAL_DEFAULT_RULE_OPTIONS = {
   'notify_no_data': True,
   'renotify_interval': 15,
-  'locked' : True
 }
 
 DATADOG_DEFAULT_OPTIONS = {
@@ -86,8 +85,7 @@ DATADOG_DEFAULT_OPTIONS = {
 
 DATADOG_DEFAULT_RULES = {
   'multi': False,
-  'type': 'metric alert',
-  'new_host_delay': 300
+  'type': 'metric alert'
 }
 
 def _pretty_yaml(d):
