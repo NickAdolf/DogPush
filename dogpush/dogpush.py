@@ -75,11 +75,11 @@ IGNORE_OPTIONS = ['silenced']
 LOCAL_DEFAULT_RULE_OPTIONS = {
   'notify_no_data': True,
   'renotify_interval': 15,
-  'locked': True
 }
 
 DATADOG_DEFAULT_OPTIONS = {
   'notify_audit': False,
+  'locked': True,
   'silenced': {},
   'new_host_delay': 300
 }
