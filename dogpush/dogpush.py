@@ -75,7 +75,8 @@ IGNORE_OPTIONS = ['silenced']
 LOCAL_DEFAULT_RULE_OPTIONS = {
   'notify_no_data': True,
   'renotify_interval': 15,
-  'locked': True
+  'locked': True,
+  'include_tags': True
 }
 
 DATADOG_DEFAULT_OPTIONS = {
