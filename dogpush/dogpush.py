@@ -14,7 +14,7 @@ from datadog import api
 import pytz
 import yaml
 
-import bcolors
+from . import bcolors
 
 PROGNAME = 'dogpush'
 
