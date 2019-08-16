@@ -123,8 +123,10 @@ def _canonical_monitor(original, default_team=None, **kwargs):
             team = [team]
         m['message'] = m.get('message', '')
         for t in team:
-            dogpush_line = CONFIG['teams'][t]['notifications'][severity]
-            m['message'] += ('\n' if m['message'] else '') + dogpush_line
+            crit_dogpush_line = CONFIG['teams'][t]['notifications']['CRITICAL' if severity == 'CRITICAL' else 'WARNING']
+            warn_dogpush_line = CONFIG['teams'][t]['notifications']['WARNING']
+            m['message'] += ('\n' if m['message'] else '') + '{{#is_alert}}' + crit_dogpush_line + '{{/is_alert}}'
+            m['message'] += ('\n' if m['message'] else '') + '{{#is_warning}}' + warn_dogpush_line + '{{/is_warning}}'
 
     result = dict(
         name = m['name'],
