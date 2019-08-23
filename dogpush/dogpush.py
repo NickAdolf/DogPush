@@ -127,6 +127,8 @@ def _canonical_monitor(original, default_team=None, **kwargs):
             warn_dogpush_line = CONFIG['teams'][t]['notifications']['WARNING']
             m['message'] += ('\n' if m['message'] else '') + '{{#is_alert}}' + crit_dogpush_line + '{{/is_alert}}'
             m['message'] += ('\n' if m['message'] else '') + '{{#is_warning}}' + warn_dogpush_line + '{{/is_warning}}'
+            m['message'] += ('\n' if m['message'] else '') + '{{#is_recovery}}' + crit_dogpush_line + '{{/is_recovery}}'
+            m['message'] += ('\n' if m['message'] else '') + '{{#is_warning_recovery}}' + warn_dogpush_line + '{{/is_warning_recovery}}'
 
     result = dict(
         name = m['name'],
