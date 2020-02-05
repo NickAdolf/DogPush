@@ -80,12 +80,14 @@ LOCAL_DEFAULT_RULE_OPTIONS = {
 DATADOG_DEFAULT_OPTIONS = {
   'notify_audit': False,
   'silenced': {},
-  'new_host_delay': 300
+  'new_host_delay': 300,
+  'restricted_roles': 'null'
 }
 
 DATADOG_DEFAULT_RULES = {
   'multi': False,
-  'type': 'metric alert'
+  'type': 'metric alert',
+  'restricted_roles': 'null'
 }
 
 def _pretty_yaml(d):
