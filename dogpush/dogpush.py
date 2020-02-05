@@ -74,7 +74,7 @@ LOCAL_DEFAULT_RULE_OPTIONS = {
   'renotify_interval': 15,
   'locked': True,
   'include_tags': True,
-  'restricted_roles': null
+  'restricted_roles': 'null'
 }
 
 DATADOG_DEFAULT_OPTIONS = {
