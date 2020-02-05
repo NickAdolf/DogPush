@@ -80,8 +80,7 @@ LOCAL_DEFAULT_RULE_OPTIONS = {
 DATADOG_DEFAULT_OPTIONS = {
   'notify_audit': False,
   'silenced': {},
-  'new_host_delay': 300,
-  'restricted_roles': 'null'
+  'new_host_delay': 300
 }
 
 DATADOG_DEFAULT_RULES = {
