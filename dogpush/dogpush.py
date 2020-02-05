@@ -63,7 +63,7 @@ IGNORE_FIELDS = ['created_at', 'created', 'modified', 'creator',
                  # dogpush specific:
                  'mute_when', 'team', 'severity']
 
-IGNORE_OPTIONS = ['silenced']
+IGNORE_OPTIONS = ['silenced', 'restricted_roles']
 
 # Datadog fields that we do not store in our monitor rules if they have the
 # default value.
