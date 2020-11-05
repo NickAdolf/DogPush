@@ -150,7 +150,6 @@ def get_datadog_monitors():
                 for z in CONFIG['dogpush']['ignore_prefix']
                     if not m['name'].startswith(z)
         ]
-    raise DogPushException ('Nicks here.')
     if not _check_monitor_names_unique(monitors):
         raise DogPushException(
             'Duplicate names found in remote datadog monitors.')
