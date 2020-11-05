@@ -147,8 +147,7 @@ def get_datadog_monitors():
     if CONFIG['dogpush']['ignore_prefix'] is not None:
         monitors = [
             m for m in monitors
-                for z in CONFIG['dogpush']['ignore_prefix']
-                    if not m['name'].startswith(z)
+                if not any(m['name'].startswith(z) for z in CONFIG['dogpush']['ignore_prefix'])
         ]
     if not _check_monitor_names_unique(monitors):
         raise DogPushException(
