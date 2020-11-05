@@ -142,13 +142,15 @@ def _canonical_monitor(original, default_team=None, **kwargs):
 
 
 def get_datadog_monitors():
+   
     monitors = api.Monitor.get_all(with_downtimes="true")
     if CONFIG['dogpush']['ignore_prefix'] is not None:
         monitors = [
             m for m in monitors
-            if not m['name'].startswith(CONFIG['dogpush']['ignore_prefix'])
+                for z in CONFIG['dogpush']['ignore_prefix']
+                    if not m['name'].startswith(z)
         ]
-
+    raise DogPushException ('Nicks here.')
     if not _check_monitor_names_unique(monitors):
         raise DogPushException(
             'Duplicate names found in remote datadog monitors.')
