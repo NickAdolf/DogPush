@@ -61,7 +61,7 @@ IGNORE_FIELDS = ['created_at', 'created', 'modified', 'creator',
                  'org_id', 'overall_state', 'id', 'deleted',
                  'matching_downtimes', 'overall_state_modified', 'restricted_roles',
                  # dogpush specific:
-                 'mute_when', 'team', 'severity']
+                 'mute_when', 'team', 'severity', 'priority']
 
 IGNORE_OPTIONS = ['silenced', 'restricted_roles']
 
@@ -73,8 +73,7 @@ LOCAL_DEFAULT_RULE_OPTIONS = {
   'notify_no_data': False,
   'renotify_interval': 15,
   'locked': True,
-  'include_tags': True,
-  'priority': 3
+  'include_tags': True
 }
 
 DATADOG_DEFAULT_OPTIONS = {
