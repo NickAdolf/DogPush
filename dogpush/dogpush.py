@@ -73,7 +73,8 @@ LOCAL_DEFAULT_RULE_OPTIONS = {
   'notify_no_data': False,
   'renotify_interval': 15,
   'locked': True,
-  'include_tags': True
+  'include_tags': True,
+  'priority': 3
 }
 
 DATADOG_DEFAULT_OPTIONS = {
